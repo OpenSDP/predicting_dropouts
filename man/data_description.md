@@ -1,18 +1,29 @@
-## Example `man` file
+## About the data
 
-*The following is an example file that could appear in the `man` folder. This folder is reserved for any descriptive information about your data or analyses that you did not put in the R markdown analysis file itself.*
+The data used in this guide is a set of simulated data for matriculating 9th 
+graders in the state of "Faketucky." Definitions of the features used in the
+guide are listed below. Response variable is indicator `dropout`, which
+indicates if student eventually dropped out of high school or did not drop out
+of high school.
 
-### Definitions for grades 3-8 features
 
-| File Column Location | Variable Title                   | Suggested R Name |Definition            | Type       | Range/Key               |
-| :-----               | :--------------                  | :-------         | :----------          | :------    | :---------------------- |
-| 1                  | GRADE LEVEL TESTED               | grade_level      | Grade level of test  | Numeric    | 3-8|
-| 2                 | COUNTY-DISTRICT-CAMPUS NUMBER    | school_code      | School ID            | Numeric    | NA                      |
-| 3                | STUDENT-ID                       | sid              | Student ID (Unique)  | Numeric    | NA                      |
-| 4                | SEX-CODE                         | male             | Sex (Binary)         | Factor     | M = Male <br> F = Female|
-| 5                   |ETHNICITY/RACE REPORTING CATEGORY | race_ethnicity        | Race-Ethnicity       | Factor   | H = Hispanic/Latino <br> I = American Indian or Alaska Native <br> A = Asian <br> B = Black or African American <br> P = Native Hawaiian or Other Pacific Islander <br> W= White <br> T = Two or More Races <br> N = No Information Provided|
-| 6             | ECONOMIC-DISADVANTAGE-CODE       | eco_dis          | Levels/types of economic disadvantage | Factor | 1 = Eligible for free meals under the National School Lunch and Child Nutrition Program <br> 0 = Not identified as economically disadvantaged|
-| 7             | LEP-INDICATOR-CODE               | lep              | Factor of LEP (limited English proficiency) level  | Factor     | 1 = Student is currently identified as LEP <br>  0 = Non-LEP student |
-| 8            | SPECIAL-ED-INDICATOR-CODE        | iep             | Indicator if special education enrolled (has IEP) | Indicator | 1 = Yes <br> 0 = No |
-| 9   | READING SCALE SCORE    | scaled_score_read | Scale score in reading   | Numeric  | 126-850 |
-| 10   | MATH SCALE SCORE    | scaled_score_math | Scale score in Math   | Numeric  | 119-890 |
+### Definitions of features
+
+The data used in this guide 
+
+| File Column Location | Variable Name       |Definition                                                    | Type       | Range/Key  |
+| :-----               | :--------           | :------------------------                                    | :--------  | :----------------------  |
+| 11                   | `male`              | gender of student                                            | Indicator  | 0 = female <br> 1 =  male |
+| 12                   | `race_ethnicity`    | race-ethnicity of student                                    | Categorical| Levels: <br> African-American <br> Asian/Pacific Islander <br> Hispanic <br> Multiple/Native America <br> White |
+| 13                   | `frpl`              | indicator if enrolled in free or reduced price lunch program | Indicator  | 0 = not enrolled <br> 1 = enrolled | 
+| 14                   | `iep`               | indicator if enrolled in special education program           | Indicator  | 0 = not enrolled <br> 1 = enrolled | 
+| 15                   | `ell`               | indicator if enrolled in English language learners program   | Indicator  | 0 = not enrolled <br> 1 = enrolled | 
+| 16                   | `gifted`            | indicator if enrolled in gifted program                      | Indicator  | 0 = not enrolled <br> 1 = enrolled | 
+| 17                   | `ever_alternative`  | indicator if ever enrolled in alternative school             | Indicator  | 0 = never enrolled <br> 1 = enrolled at least once | 
+| 20                   | `math_ss`           | scale score on standardized 8th grade math exam              | Percentage | Possible range: 0-100  | 
+| 21                   | `read_ss`           | scale score on standardized 8th grade reading exam           | Percentage | Possible range: 0-100  | 
+| 22                   | `pct_days_absent`   | percent of 8th grade school days marked absent               | Percentage | Possible range: 0-100  | 
+| 24                   | `gpa`               | grade point average in 8th grade                             | Continuous | Possible range: 0.00 - 4.00  | 
+| 33                   | `dropout`           | indicator if student eventually dropped out of high school   | Indicator  | 0 = did not drop out <br> 1 = dropped out | 
+
+
